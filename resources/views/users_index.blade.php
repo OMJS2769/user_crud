@@ -25,7 +25,8 @@
                 <img src="{{ asset('storage/user_images/'.$user->image) }}" class="img-circle elevation-2" alt="User Image" width="60" height="60"/>
                 @endif
             </td>
-            <td>{{ $user->name }}</td>
+            <td>
+            <a href="{{ route('show_user',md5($user->id).'somewere'.$user->id.'somewere'.md5($user->id)) }}">{{ $user->name }}</a></td>
             <td>{{ $user->email }}</td>
             <td>
                 <a href="javascript:void(0)" wire:click = "edit({{ $user->id }})" class ="btn btn-warning">Editar</a>
